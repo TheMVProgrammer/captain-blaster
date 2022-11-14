@@ -6,7 +6,6 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
     GameManager gameManager; // Note this is private this time
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +21,6 @@ public class Bullet : MonoBehaviour
     {
         Destroy(other.gameObject); // Destroy the meteor
         gameManager.AddScore(); // Increment the score
-        Destroy(gameObject); // Destroy the bullet
+        Destroy(gameObject); // Destroy the bullet        
     }
 }

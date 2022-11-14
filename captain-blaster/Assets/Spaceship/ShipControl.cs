@@ -9,6 +9,7 @@ public class ShipControl : MonoBehaviour
     public float speed = 10f;
     public float xLimit = 7f;
     public float reloadTime = 0.5f;
+    public AudioSource audioSource;
 
     float elapsedTime = 0f;
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class ShipControl : MonoBehaviour
             Vector3 spawnPos = transform.position;
             spawnPos += new Vector3(0, 1.2f, 0);
             Instantiate(bulletPrefab, spawnPos, Quaternion.identity);
+            audioSource.Play();
             elapsedTime = 0f; // Reset bullet firing timer
         }
     }

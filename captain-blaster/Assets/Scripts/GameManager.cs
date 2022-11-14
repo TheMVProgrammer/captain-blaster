@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     {
         playerScore++;
         // This converts the score (a number) into a string
-        scoreText.text = playerScore.ToString();
+        scoreText.text = "Score: " + playerScore.ToString();
     }
     public void PlayerDied()
     {
